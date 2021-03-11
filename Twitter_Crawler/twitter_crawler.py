@@ -24,6 +24,7 @@ def connent_url(UrlPath):
                 soup = BeautifulSoup(html, 'lxml')
                 divs = soup.find_all(
                     'div', {'class': 'css-1dbjc4n r-18u37iz', 'data-testid': 'tweet'})
+                print(divs)
                 page += 1
                 print('Fetching data on page {}！！！'.format(page))
 
@@ -33,18 +34,17 @@ def connent_url(UrlPath):
                         'div', {'class': 'css-1dbjc4n r-1awozwy r-18u37iz r-dnmrzs'}).get_text()
                     data_list.append(name)
                     user_name = div.find(
-                        'div', {'class': 'css-1dbjc4n r-18u37iz r-1wbh5a2 r-1f6r7vd'}).get_text()
+                        'div', {'class': 'css-1dbjc4n r-18u37iz r-1wbh5a2 r-13hce6t'}).get_text()
                     data_list.append(user_name)
-                    date = div.find('a', {
-                                    'class': 'r-111h2gw r-1loqt21 r-1q142lx r-1qd0xha r-a023e6 r-16dba41 r-ad9z0x r-bcqeeo r-3s2u2q r-qvutc0 css-4rbku5 css-18t94o4 css-901oao'})
-                    data_list.append(date['title'])
+                    date = div.find('time')
+                    data_list.append(date['datetime'])
                     content = div.find('div', {
-                        'class': 'css-901oao r-jwli3a r-1qd0xha r-a023e6 r-16dba41 r-ad9z0x r-bcqeeo r-bnwqim r-qvutc0'}).get_text()
+                        'class': 'css-901oao r-1fmj7o5 r-1qd0xha r-a023e6 r-16dba41 r-ad9z0x r-bcqeeo r-bnwqim r-qvutc0'}).get_text()
                     data_list.append(str(content).strip().replace('\n', ''))
                     Data_List.append(data_list)
                 time.sleep(3)
-        except:
-            print('当前数据获取完毕。')
+        except Exception as e:
+            print(e)
         print('第 {} 个URL信息已获取完毕。'.format(i))
         i = i + 1
 
