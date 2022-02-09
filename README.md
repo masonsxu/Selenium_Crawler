@@ -26,21 +26,21 @@
 
 ### 文件夹中的文件分别对应内容
 
-==New_York_Times_Crawler==：存 New York Tiems 的爬虫代码
+New_York_Times_Crawler：存 New York Tiems 的爬虫代码
 
- ==New_York_Times_Data==：存放成功爬取的数据，格式分别为 csv 和 excel
+New_York_Times_Data：存放成功爬取的数据，格式分别为 csv 和 excel
 
- ==news_crawler.py==： New York Tiems 的爬虫代码
+news_crawler.py： New York Tiems 的爬虫代码
 
- ==news_url.txt==：存放想要爬取的 New York Tiems 的 url 地址（可以放置多条地址）
+news_url.txt：存放想要爬取的 New York Tiems 的 url 地址（可以放置多条地址）
 
-==Twitter_Crawler==：存放 Twitter 的爬虫代码
+Twitter_Crawler：存放 Twitter 的爬虫代码
 
- ==TwitterData==：存放成功爬取的数据，格式分别为 csv 和 excel
+TwitterData：存放成功爬取的数据，格式分别为 csv 和 excel
 
- ==twitter_crawler.py==：Twitter 的爬虫代码
+twitter_crawler.py：Twitter 的爬虫代码
 
- ==twitter_url.txt==：存放想要爬取的 Twitter 的 url 地址（可以放置多条地址）
+twitter_url.txt：存放想要爬取的 Twitter 的 url 地址（可以放置多条地址）
 
 ## 爬虫所对应的网站的网页结构
 
